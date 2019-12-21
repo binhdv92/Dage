@@ -9,12 +9,21 @@
 #     + Output: "final_pull_shear.csv"
 
 # In[ ]:
+import os
+import argparse
+import csv
+
+# In[]
+parser=argparse.ArgumentParser(description="This use for convert the PULL and Share Dage Nordson Format to table format")
+parser.add_argument('-p','--path',default='.')
+parser.add_argument('-o','--outfile',default="final_pull_shear.csv")
+
+args=parser.parse_args()
+print(args.__dict__)
 
 
 # listing pull and shear csv file
-import os
-
-temp01=os.listdir(".")
+temp01=os.listdir(args.path)
 temppull=[]
 tempshear=[]
 tempfull=[]
@@ -91,8 +100,7 @@ for filename in tempfull:
     f.close()
     
 ## save to table csv file
-import csv
-with open("final_pull_shear"+".csv","w") as f:
+with open(args.outfile,"w") as f:
     writer=csv.writer(f)
     writer.writerows(result01)
 f.close()
