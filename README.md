@@ -35,5 +35,6 @@ Output file will be is "final_pull_shear.csv"
 > $ pip install PyInstaller
 2. use below command to convert to exe file
 > pyinstaller /path/to/yourscript.py
+
 > py sintaller /path/to/yourscript.py --onefile
 # Thanks
