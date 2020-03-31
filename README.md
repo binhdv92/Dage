@@ -30,4 +30,9 @@ Output file will be is "final_pull_shear.csv"
 |PULL_1.csv	|"10/09/19"	|"16:50:08"	|"KWB278"	|"20035517"	|"Wire Pull"	|1	|8.7069|
 |PULL_1.csv	|"10/09/19"	|"16:50:08"	|"KWB278"	|"20035517"	|"Wire Pull"	|2	|9.4995|
 
+# Convert *.py file to *.exe file
+1. install pyinstaller
+> $ pip install PyInstaller
+2. use below command to convert to exe file
+> pyinstaller /path/to/yourscript.py
 # Thanks
